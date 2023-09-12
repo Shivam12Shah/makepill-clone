@@ -81,3 +81,36 @@ document.querySelector("#page4").addEventListener('mouseleave', ()=>{
   crsr.style.backgroundColor = `white`
 
 })
+
+
+var tags = document.querySelectorAll(".tags")
+
+var attri = ''
+
+tags.forEach(function(dets){
+  dets.addEventListener("mouseenter", function(){
+    attri = dets.getAttribute("data-video");
+    document.querySelector("#page5 video").setAttribute("src", attri)
+    dets.style.opacity =1
+
+  })
+  dets.addEventListener("mouseleave", function(){
+    document.querySelector("#page5").style.backgroundColor = `black`
+    dets.style.opacity =0.4
+    document.querySelector("#page5 video").setAttribute("src", 'black')
+    
+  })
+})
+
+gsap.to("#page6",{
+  backgroundColor: `white`,
+  color:"black",
+  scrollTrigger:{
+    trigger:"#page6",
+    scroller:"#main",
+    scrub:2,
+    markers:true,
+    start:"top 10%",
+    end:"top 8%"
+  }
+})

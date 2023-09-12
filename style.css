@@ -259,11 +259,21 @@ html, body{
 #page5{
     width: 100%;
     height: 100vh;
-    background-color: lightgreen;
+    background-color:black;
     position: relative;
    
 
 }
+#page5 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0.5;
+    transition: all ease 0.5;
+    background-color: black;
+}
+
 #scroller-page5{
     width: 100%;
     height: 100%;
@@ -272,6 +282,7 @@ html, body{
     /* background-color: rgb(50, 150, 100); */
     position: relative;
     padding: 30vw 0vw;
+
 }
 .tags{
     width: 100%;
@@ -281,6 +292,9 @@ html, body{
     align-items: center;
     justify-content: space-between;
     padding: 0vw 13vw;
+    opacity: 0.4;
+    transition: all ease 0.5;
+    
     /* border: 1px solid black; */
 
 }
@@ -290,6 +304,7 @@ html, body{
 .tags h1{
     font-size: 6vw;
     font-weight: 100;
+    /* opacity: 0.4; */
 }
 
 .tags a{
@@ -298,27 +313,95 @@ html, body{
     border-radius: 50px;
     border: 1px solid white;
     font-size: 1vw;
+    color: white;
+    text-decoration: none;
+    /* opacity: 0; */
+}
+#scroller-page5 .tags:nth-last-child(1) i{
+    font-size: 8vw;
 }
 
 
 #page6{
     width: 100%;
-    height: 100vh;
-    background-color: lightcoral;
+    /* height: 120vh; */
+    position: relative;
+    /* padding: 3vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: white;
+    background-color: black;
+    margin-top: -1%;
+    padding: 15vw 0px;
+}
+#page6-left , #page6-right{
+    width: 45%;
+    height: 80%;
+    /* backgro  und-color: red; */
+
+}
+#page6-left{
+    padding: 5vw;
+}
+#page6-left video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
+#page6-right {
+    padding-left: 10vw;
+}
+#page6-right p{
+    font-size: 1.5vw;
+    margin-bottom: 5vw;
+}
+#page6-right h4{
+    font-size: 2.6vw;
+    font-weight: 100;
+    margin-bottom: 4vw;
+}
+#page6-circle{
+    width: 8vw;
+    height: 8vw;
+    position: relative;
+    border-radius: 50%;
+    border: 0.5px solid black;
+    margin-top: 3vw;
+}
+#page6-circle p{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1vw;
+}
 
-@media screen and (max-width: 1000px) {
-    #page3{
-        width: 100%;
-        /* height: 120vh; */
-        position: relative;
-        /* padding: 3vw; */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-        color: black;
-    }
-  }
+.scrolling{
+    color: black;
+    width: 100%;
+    white-space: nowrap;
+    padding: 2vw 0vw;
+}
+.part{
+    display: inline-block;
+    animation-name: scroller;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.part li{
+    font-size: 4vw;
+    margin-right: 40px;
+    display: inline-block;
+}
+#cclients p{
+    color: black;
+    padding: 0px 15vw;
+}
+.scrolling:nth-last-child(1) .part{
+    /* background-color: red; */
+    animation-direction: reverse;
+}
