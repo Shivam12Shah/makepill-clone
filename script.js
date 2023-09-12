@@ -92,12 +92,14 @@ tags.forEach(function(dets){
     attri = dets.getAttribute("data-video");
     document.querySelector("#page5 video").setAttribute("src", attri)
     dets.style.opacity =1
+    dets.lastElementChild.style.display = `initial`
 
   })
   dets.addEventListener("mouseleave", function(){
     document.querySelector("#page5").style.backgroundColor = `black`
     dets.style.opacity =0.4
     document.querySelector("#page5 video").setAttribute("src", 'black')
+    dets.lastElementChild.style.display = `none`
     
   })
 })
@@ -109,7 +111,7 @@ gsap.to("#page6",{
     trigger:"#page6",
     scroller:"#main",
     scrub:2,
-    markers:true,
+    // markers:true,
     start:"top 10%",
     end:"top 8%"
   }

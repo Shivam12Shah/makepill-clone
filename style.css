@@ -304,10 +304,14 @@ html, body{
 .tags h1{
     font-size: 6vw;
     font-weight: 100;
-    /* opacity: 0.4; */
+    opacity: 0.4;
+}
+.detsils{
+    display: none;
+    transition: all ease 0.4s;
 }
 
-.tags a{
+.detsils a{
     margin-left: 10px;
     padding: 5px 8px;
     border-radius: 50px;
@@ -315,7 +319,7 @@ html, body{
     font-size: 1vw;
     color: white;
     text-decoration: none;
-    /* opacity: 0; */
+
 }
 #scroller-page5 .tags:nth-last-child(1) i{
     font-size: 8vw;
@@ -383,7 +387,8 @@ html, body{
     color: black;
     width: 100%;
     white-space: nowrap;
-    padding: 2vw 0vw;
+
+    margin: 5vw 0vw;
 }
 .part{
     display: inline-block;
@@ -400,8 +405,103 @@ html, body{
 #cclients p{
     color: black;
     padding: 0px 15vw;
+    margin-bottom: 5vw;
 }
 .scrolling:nth-last-child(1) .part{
     /* background-color: red; */
     animation-direction: reverse;
+}
+#follow{
+    color:white;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+#follow p{
+    text-align: center;
+    padding: 4vw 0vw;
+}
+.effect{
+    width: 100%;
+    height: 15vh;
+    background-color: red;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: -5px;
+
+}
+
+.effect h1{
+    height: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: grey;
+}
+
+.calo{
+    color: black;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(40, 40, 40);
+    white-space: nowrap;
+    padding: 2vw 0vw;
+    z-index: 99999;
+}
+.calao li:nth-child(1) {
+    color: white;
+}
+.calao li:nth-child(2) {
+    color: yellow;
+}
+.calao li:nth-child(3) {
+    color: gray;
+}
+.calao li:nth-child(4) {
+    color: white;
+}
+.calao li:nth-child(5) {
+    color: yellow;
+}
+.calao li:nth-child(6) {
+    color: gray;
+}
+.calao{
+    display: inline-block;
+    animation-name: scroller;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+.calao li{
+    font-size: 3vw;
+    margin-right: 10px;
+    display: inline-block;
+}
+/* .d{
+    transition: all ease 0.4s;
+} */
+.effect:hover .d{
+    animation-name: uper;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    /* animation-play-state: paused; */
+}
+@keyframes uper {
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+#footer{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    margin-top: -1%;
 }
