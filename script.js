@@ -34,3 +34,50 @@ ScrollTrigger.refresh();
 
 }
 locooo();
+
+window.addEventListener("mousemove", function(dets){
+  document.querySelector("#cursor").style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)`
+})
+
+gsap.to("#scroller-page5",{
+  scrollTrigger:{
+    trigger:"#page5",
+    scroller:"#main",
+    pin:true,
+    scrub:2,
+    // markers:true,
+    start:"top 0%",
+    end:"200% 0%"
+  }
+})
+
+var crsri = document.querySelector("#cursor i")
+var crsr = document.querySelector("#cursor")
+document.querySelector("#page2").addEventListener('mouseenter', ()=>{
+  crsri.style.display = `initial`
+  crsr.style.width = `${150}px`
+  crsr.style.height = `${150}px`
+})
+document.querySelector("#page2").addEventListener('mouseleave', ()=>{
+  crsri.style.display = `none`
+  crsr.style.width = `${20}px`
+  crsr.style.height = `${20}px`
+})
+document.querySelector("#page3").addEventListener('mouseenter', ()=>{
+
+  crsr.style.backgroundColor = `black`
+
+})
+document.querySelector("#page3").addEventListener('mouseleave', ()=>{
+  crsr.style.backgroundColor = `white`
+
+})
+document.querySelector("#page4").addEventListener('mouseenter', ()=>{
+
+  crsr.style.backgroundColor = `black`
+
+})
+document.querySelector("#page4").addEventListener('mouseleave', ()=>{
+  crsr.style.backgroundColor = `white`
+
+})
